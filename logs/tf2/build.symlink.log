@@ -1,0 +1,4 @@
+Symlinking /home/dvir/catkin_new/devel/lib/libtf2.so
+Symlinking /home/dvir/catkin_new/devel/lib/pkgconfig/tf2.pc
+Symlinking /home/dvir/catkin_new/devel/share/tf2/cmake/tf2Config-version.cmake
+Symlinking /home/dvir/catkin_new/devel/share/tf2/cmake/tf2Config.cmake

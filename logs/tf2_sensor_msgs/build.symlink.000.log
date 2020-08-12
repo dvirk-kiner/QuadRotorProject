@@ -1,0 +1,4 @@
+Symlinking /home/dvir/catkin_new/devel/lib/pkgconfig/tf2_sensor_msgs.pc
+Symlinking /home/dvir/catkin_new/devel/lib/python2.7/dist-packages/tf2_sensor_msgs/__init__.py
+Symlinking /home/dvir/catkin_new/devel/share/tf2_sensor_msgs/cmake/tf2_sensor_msgsConfig.cmake
+Symlinking /home/dvir/catkin_new/devel/share/tf2_sensor_msgs/cmake/tf2_sensor_msgsConfig-version.cmake

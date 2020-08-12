@@ -1,0 +1,2 @@
+rosplan_demos/rosplan_demos
+/home/dvir/catkin_new/devel/.private/rosplan_demos/cmake.lock /home/dvir/catkin_new/devel/./cmake.lock

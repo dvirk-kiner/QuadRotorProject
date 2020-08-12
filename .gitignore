@@ -1,0 +1,5 @@
+src/ROSPlan/
+src/ROSPlan/*
+src/rosplan_demos/
+src/rosplan_demos/*
+src/rotor_control/scripts/ML/saved_models/*

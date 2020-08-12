@@ -1,0 +1,6 @@
+ROSPlan/rosplan_knowledge_base
+/home/dvir/catkin_new/devel/.private/rosplan_knowledge_base/cmake.lock /home/dvir/catkin_new/devel/./cmake.lock
+/home/dvir/catkin_new/devel/.private/rosplan_knowledge_base/lib/pkgconfig/rosplan_knowledge_base.pc /home/dvir/catkin_new/devel/lib/pkgconfig/rosplan_knowledge_base.pc
+/home/dvir/catkin_new/devel/.private/rosplan_knowledge_base/lib/rosplan_knowledge_base/knowledgeBase /home/dvir/catkin_new/devel/lib/rosplan_knowledge_base/knowledgeBase
+/home/dvir/catkin_new/devel/.private/rosplan_knowledge_base/share/rosplan_knowledge_base/cmake/rosplan_knowledge_baseConfig.cmake /home/dvir/catkin_new/devel/share/rosplan_knowledge_base/cmake/rosplan_knowledge_baseConfig.cmake
+/home/dvir/catkin_new/devel/.private/rosplan_knowledge_base/share/rosplan_knowledge_base/cmake/rosplan_knowledge_baseConfig-version.cmake /home/dvir/catkin_new/devel/share/rosplan_knowledge_base/cmake/rosplan_knowledge_baseConfig-version.cmake

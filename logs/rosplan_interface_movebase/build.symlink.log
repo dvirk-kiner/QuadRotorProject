@@ -1,0 +1,4 @@
+Symlinking /home/dvir/catkin_new/devel/lib/pkgconfig/rosplan_interface_movebase.pc
+Symlinking /home/dvir/catkin_new/devel/lib/rosplan_interface_movebase/rpmovebase
+Symlinking /home/dvir/catkin_new/devel/share/rosplan_interface_movebase/cmake/rosplan_interface_movebaseConfig-version.cmake
+Symlinking /home/dvir/catkin_new/devel/share/rosplan_interface_movebase/cmake/rosplan_interface_movebaseConfig.cmake

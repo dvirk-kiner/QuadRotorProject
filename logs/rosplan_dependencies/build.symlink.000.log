@@ -1,0 +1,7 @@
+Symlinking /home/dvir/catkin_new/devel/lib/librddl_parser.so
+Symlinking /home/dvir/catkin_new/devel/lib/libppddl_parser.so
+Symlinking /home/dvir/catkin_new/devel/lib/libippc_server.so
+Symlinking /home/dvir/catkin_new/devel/lib/libval_kcl.so
+Symlinking /home/dvir/catkin_new/devel/lib/pkgconfig/rosplan_dependencies.pc
+Symlinking /home/dvir/catkin_new/devel/share/rosplan_dependencies/cmake/rosplan_dependenciesConfig-version.cmake
+Symlinking /home/dvir/catkin_new/devel/share/rosplan_dependencies/cmake/rosplan_dependenciesConfig.cmake

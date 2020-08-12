@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<launch>
+
+
+	<!-- Init Gazebo World -->
+	  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be 		launched -->
+	  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+	    <arg name="world_name" value="$(find rotor_control)/worlds/construction_site_4_new.world"/>
+	  </include>
+
+
+	  <include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+	    <arg name="model" value="$(find cvg_sim_gazebo)/urdf/quadrotor_sensors.urdf.xacro"/> 
+	  </include>
+
+
+	<!-- arguments -->
+	<arg name="domain_path"	default="$(find rotor_control)/common/domain.pddl" />
+	<arg name="problem_path"	default="$(find rotor_control)/common/problem.pddl" />
+	<arg name="node_start_delay" default ="20.0" />
+	<!-- knowledge base -->
+	<node name="rosplan_knowledge_base" pkg="rosplan_knowledge_base" type="knowledgeBase" respawn="false" output="screen">
+		<param name="domain_path" value="$(arg domain_path)" />
+		<param name="problem_path" value="$(arg problem_path)" />
+		<param name="database_path" value="$(find rosplan_knowledge_base)/common/mongoDB/" />
+		<!-- conditional planning flags -->
+		<param name="use_unknowns" value="false" />
+	</node>
+
+	<!-- problem generation -->
+	<include file="$(find rosplan_planning_system)/launch/includes/problem_interface.launch">
+		<arg name="knowledge_base"   value="rosplan_knowledge_base" />
+		<arg name="domain_path"      value="$(arg domain_path)" />
+		<arg name="problem_path"     value="$(find rotor_control)/common/problem.pddl" />
+		<arg name="problem_topic"    value="problem_instance" />
+	</include>
+	
+	<!-- scene database (MongoDB) -->
+	<include file="$(find mongodb_store)/launch/mongodb_store.launch">
+		<arg name="db_path" value="$(find rosplan_knowledge_base)/common/mongoDB/"/>
+	</include>
+
+	<!-- planner interface -->
+	<include file="$(find rosplan_planning_system)/launch/includes/planner_interface.launch">
+		<arg name="use_problem_topic"    value="true" />
+		<arg name="problem_topic"        value="/rosplan_problem_interface/problem_instance" />
+		<arg name="planner_topic"        value="planner_output" />
+		<arg name="domain_path"          value="$(arg domain_path)" />
+		<arg name="problem_path"         value="$(find rotor_control)/common/problem.pddl" />
+		<arg name="data_path"            value="$(find rotor_control)/common/" />
+		<arg name="planner_command"      value="timeout 10 $(find rosplan_planning_system)/common/bin/popf DOMAIN PROBLEM" />
+	</include>
+	
+	
+	
+	<node pkg="rosservice" type="rosservice" name="problem_generation_server" args="call --wait /rosplan_problem_interface/problem_generation_server"/> 
+	<node pkg="rosservice" type="rosservice" name="planning_server" args="call --wait /rosplan_planner_interface/planning_server" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/> 
+
+	
+
+</launch>

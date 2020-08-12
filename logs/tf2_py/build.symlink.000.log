@@ -1,0 +1,5 @@
+Symlinking /home/dvir/catkin_new/devel/lib/pkgconfig/tf2_py.pc
+Symlinking /home/dvir/catkin_new/devel/lib/python2.7/dist-packages/tf2_py/__init__.py
+Symlinking /home/dvir/catkin_new/devel/lib/python2.7/dist-packages/tf2_py/_tf2.so
+Symlinking /home/dvir/catkin_new/devel/share/tf2_py/cmake/tf2_pyConfig.cmake
+Symlinking /home/dvir/catkin_new/devel/share/tf2_py/cmake/tf2_pyConfig-version.cmake

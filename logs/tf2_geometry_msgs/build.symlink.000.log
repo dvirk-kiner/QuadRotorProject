@@ -1,0 +1,4 @@
+Symlinking /home/dvir/catkin_new/devel/lib/pkgconfig/tf2_geometry_msgs.pc
+Symlinking /home/dvir/catkin_new/devel/lib/python2.7/dist-packages/tf2_geometry_msgs/__init__.py
+Symlinking /home/dvir/catkin_new/devel/share/tf2_geometry_msgs/cmake/tf2_geometry_msgsConfig-version.cmake
+Symlinking /home/dvir/catkin_new/devel/share/tf2_geometry_msgs/cmake/tf2_geometry_msgsConfig.cmake
